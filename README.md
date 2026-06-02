@@ -16,14 +16,23 @@ Sales gamification platform for AJE Snacks vendors.
 2. **Easypanel Dashboard**
    - Create Service → Git Repository
    - Repository URL: your GitHub repo
-   - Dockerfile Path: `deploy/Dockerfile`
+   - Dockerfile Path: `Dockerfile`  *(en la raíz, NO `deploy/Dockerfile`)*
    - Port: 80
    - Deploy!
 
+## URLs
+- `/`             → Selector (Panel Admin / App Vendedor)
+- `/admin.html`   → Panel Admin
+- `/vendedor.html`→ App Vendedor
+
 ## Local Testing
 ```bash
-docker build -t nc-rewards -f deploy/Dockerfile .
+# Con Docker:
+docker build -t nc-rewards .
 docker run -p 8000:80 nc-rewards
+
+# Sin Docker (Python):
+py -m http.server 8000
 ```
 
-Visit: http://localhost:8000/Dashboard%20Admin.html
+Visit: http://localhost:8000/

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es-GT">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Campeón del Abarrote · NC Rewards</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800&family=Barlow+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --aje-green:#008751; --aje-green-d:#016b41; --aje-green-l:#1aa56a;
+    --yellow:#FFCC00; --yellow-d:#e6b800;
+    --navy:#0c1c40; --navy-2:#14264f;
+    --ink:#0f1b33; --slate:#9fb0cf;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;min-height:100vh}
+  body{
+    font-family:'Barlow',system-ui,sans-serif; color:#fff;
+    background:radial-gradient(circle at 50% 0%, #14264f, #0c1c40 60%, #081530 100%);
+    min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px;
+  }
+  .disp{font-family:'Barlow Condensed',sans-serif;font-weight:900;letter-spacing:.01em;line-height:.95}
+  .cond{font-family:'Barlow Semi Condensed',sans-serif}
+
+  .wrap{width:100%;max-width:520px;text-align:center}
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;
+    background:rgba(255,204,0,.12);border:1px solid rgba(255,204,0,.35);color:var(--yellow);
+    font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:22px;
+  }
+  h1{font-size:clamp(38px,9vw,62px);margin:0 0 8px}
+  h1 .y{color:var(--yellow)}
+  .sub{color:var(--slate);font-size:16px;font-weight:500;margin:0 auto 38px;max-width:420px;line-height:1.5}
+
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media (max-width:460px){ .cards{grid-template-columns:1fr} }
+
+  .card{
+    display:flex;flex-direction:column;align-items:center;gap:12px;
+    padding:30px 22px;border-radius:20px;text-decoration:none;color:#fff;
+    background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.10);
+    transition:transform .15s ease, border-color .15s ease, background .15s ease;
+  }
+  .card:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.07)}
+  .ico{
+    width:64px;height:64px;border-radius:18px;display:flex;align-items:center;justify-content:center;
+    font-size:30px;
+  }
+  .ico.admin{background:linear-gradient(135deg,var(--aje-green-l),var(--aje-green-d))}
+  .ico.vend{background:linear-gradient(135deg,#1d3463,#0a163a);border:1px solid rgba(255,255,255,.12)}
+  .card .t{font-weight:800;font-size:20px}
+  .card .d{color:var(--slate);font-size:13px;line-height:1.4}
+  .go{margin-top:6px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--yellow)}
+
+  .foot{margin-top:34px;color:rgba(159,176,207,.7);font-size:12px}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <span class="badge">AJE Snacks · D'Gussto · Dest</span>
+    <h1 class="disp">CAMPEÓN DEL <span class="y">ABARROTE</span></h1>
+    <p class="sub">Plataforma de gamificación de ventas. Elige cómo quieres ingresar.</p>
+
+    <div class="cards">
+      <a class="card" href="admin.html">
+        <div class="ico admin">🧑‍💼</div>
+        <div class="t">Panel Admin</div>
+        <div class="d">Vista ejecutiva: ranking, puntos, premios y alertas de canje.</div>
+        <div class="go">Entrar →</div>
+      </a>
+      <a class="card" href="vendedor.html">
+        <div class="ico vend">📱</div>
+        <div class="t">App Vendedor</div>
+        <div class="d">Vista personal: cumplimiento, puntos, carrera y catálogo.</div>
+        <div class="go">Entrar →</div>
+      </a>
+    </div>
+
+    <div class="foot">NC Rewards · Fase 1 — Prototipo</div>
+  </div>
+</body>
+</html>
